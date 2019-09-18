@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart of Crown Shuffler</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script src="test.js"></script>
+</head>
+<body>
+	<div>
+		<div>
+			<p id="txt_top_script">
+				10종류의 카드를 뽑아줍니다.
+			</p>
+		</div>
+		<div id="div_selector">
+			<p>
+				<input type="checkbox" name="cb_expansion" value="original" id="cb_original" checked="checked"> <label for="cb_original"></label> 기본판 <br>
+				<input type="checkbox" name="cb_expansion" value="fareast" id="cb_fareast"> <label for="cb_fareast"></label> 극동 변방령 확장 <br>
+				<input type="checkbox" name="cb_expansion" value="witch" id="cb_witch"> <label for="cb_witch"></label> 북쪽 끝의 마녀 <br>
+				<button type="button" name="btn_shuffle" id="btn_shuffle" onclick="select_cards();">뽑기</button>
+			</p>
+		</div>
+	</div>
+	<div id="table_selected">
+	</div>
+</body>

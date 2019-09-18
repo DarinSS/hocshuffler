@@ -1,0 +1,56 @@
+body{
+	text-align: center;
+}
+
+p{
+	width: 50%;
+	margin: 0 auto;
+	line-height: 200%;
+}
+p#txt_top_script{
+	color:#800000;
+	font-size: 2.3em;
+	line-height: 250%;
+}
+
+div#div_selector{
+	padding: 1em;
+	border-style: solid;
+	border-color: gray;
+}
+
+button#btn_shuffle{
+	width: 10em;
+	background-color: skyblue;
+	color: #FFFFFF;
+	border: none;
+	padding: 0.5em;
+	font-size: 1.2em;
+	margin: 0.5em;
+}
+
+input[id="cb_original"] + label , input[id="cb_fareast"] + label , input[id="cb_witch"] + label {
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	border: 0.1em solid lavender;
+	cursor: pointer;
+}
+input[id="cb_original"]:checked + label ,input[id="cb_fareast"]:checked + label , input[id="cb_witch"]:checked + label {
+	background-color: gold;
+}
+input[id="cb_original"], input[id="cb_fareast"], input[id="cb_witch"]{
+	display: none;
+}
+
+table{
+	width: 50%;
+	margin: 0 auto;
+	padding: 3em;
+	border: solid gray;
+	border-collapse: collapse;
+}
+th, td{
+	padding: 0.5em;
+	border: solid gray;
+}
