@@ -7,13 +7,13 @@ body{
 }
 
 p{
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 	line-height: 200%;
 }
 p#txt_top_script{
 	color:#800000;
-	font-size: 2.3em;
+	font-size: 1.5em;
 	line-height: 250%;
 }
 
@@ -48,8 +48,9 @@ input[id="cb_original"], input[id="cb_fareast"], input[id="cb_witch"]{
 }
 
 table{
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
+	margin-top: 1em;
 	padding: 3em;
 	border: solid gray;
 	border-collapse: collapse;
