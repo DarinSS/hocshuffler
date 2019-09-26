@@ -9,11 +9,22 @@
 <body>
 	<div>
 		<div>
-			<p id="txt_top_script">
-				10종류의 카드를 뽑아줍니다.
+			<p>
+				<h1>10종류의 카드를 뽑아줍니다.</h1>
 			</p>
 		</div>
-		<div id="div_selector">
+		<div id="div_option" class="box">
+			<p>
+				<h3>정렬 옵션</h3>
+			</p>
+			<p>
+				<input type="checkbox" name="cb_option" value="order_expansion" id="cb_order_expansion" checked="checked"><label for="cb_order_expansion"></label> 확장팩순<br>
+			</p>
+		</div><br>
+		<div id="div_selector" class="box">
+			<p>
+				<h3>확장팩 선택</h3>
+			</p>
 			<p>
 				<input type="checkbox" name="cb_expansion" value="original" id="cb_original" checked="checked"> <label for="cb_original"></label> 기본판 <br>
 				<input type="checkbox" name="cb_expansion" value="fareast" id="cb_fareast"> <label for="cb_fareast"></label> 극동 변방령 <br>

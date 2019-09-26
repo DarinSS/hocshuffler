@@ -38,6 +38,7 @@ function expansion_type(str_expansion){
 
 function select_cards(){
 	checked_expansion = document.getElementsByName("cb_expansion");
+	checked_option = document.getElementsByName("cb_option");
 	//alert(checked_expansion.length);
 	var cardlist = new Array;
 	if(!(checked_expansion[0].checked||checked_expansion[1].checked||checked_expansion[2].checked)){
@@ -58,17 +59,20 @@ function select_cards(){
 	}
 	var shuffledcard = arrayShuffle(cardlist);
 	shuffledcard = shuffledcard.slice(0,10);
+	
 	shuffledcard.sort(function(a,b){
 		if(a[0]>b[0]) return 1;
 		if(a[0]<b[0]) return -1;
 		return 0;
 	});
-	shuffledcard.sort(function(a,b){
-		if(a[1]>b[1]) return 1;
-		if(a[1]<b[1]) return -1;
-		return 0;
-	});
-
+	
+	if(checked_option[0].checked){
+		shuffledcard.sort(function(a,b){
+			if(a[1]>b[1]) return 1;
+			if(a[1]<b[1]) return -1;
+			return 0;
+		});
+		}
 	var table_selected = "<table><tbody>";
 	for(var i=1;i<=10;i++){
 		table_selected += "<tr><td>"+i+"</td><td>"+shuffledcard[i-1][0]+"</td><td>"+expansion_type(shuffledcard[i-1][1])+"</td></tr>";

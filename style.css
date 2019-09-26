@@ -11,17 +11,25 @@ p{
 	margin: 0 auto;
 	line-height: 200%;
 }
-p#txt_top_script{
+h1{
 	color:#800000;
 	font-size: 1.5em;
 	line-height: 250%;
 }
+h3{
+	color:#000000;
+	font-size: 1.2em;
+	line-height: 200%;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
 
-div#div_selector{
+div.box{
 	padding: 1em;
 	border-style: solid;
 	border-color: gray;
 }
+
 
 button#btn_shuffle{
 	width: 10em;
@@ -33,17 +41,17 @@ button#btn_shuffle{
 	margin: 0.5em;
 }
 
-input[id="cb_original"] + label , input[id="cb_fareast"] + label , input[id="cb_witch"] + label {
+input[id="cb_original"] + label , input[id="cb_fareast"] + label , input[id="cb_witch"] + label, input[id="cb_order_expansion"] + label{
 	display: inline-block;
 	width: 1.2em;
 	height: 1.2em;
 	border: 0.1em solid lavender;
 	cursor: pointer;
 }
-input[id="cb_original"]:checked + label ,input[id="cb_fareast"]:checked + label , input[id="cb_witch"]:checked + label {
+input[id="cb_original"]:checked + label ,input[id="cb_fareast"]:checked + label , input[id="cb_witch"]:checked + label, input[id="cb_order_expansion"]:checked + label {
 	background-color: gold;
 }
-input[id="cb_original"], input[id="cb_fareast"], input[id="cb_witch"]{
+input[id="cb_original"], input[id="cb_fareast"], input[id="cb_witch"], input[id="cb_order_expansion"]{
 	display: none;
 }
 
