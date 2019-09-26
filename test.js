@@ -3,17 +3,17 @@ var cardlist_original = [
 ["대금업자"],["도서관"],["점성술 마녀"],["도시 개발"],["보병대대"],["보급부대"],["정찰"],["소집 영장"],["화전 농업"],["은신처"],
 ["교역선"],["파성추"],["매수공작"],["마법의 부적"],["묻혀있는 보물"],["내몰린 마수"],["성벽"],["소원의 샘"],["파발마"],["기부"]
 ];
-for(var i=0;i<cardlist_original.length;i++) cardlist_original[i].push("original");
+for(var i=0;i<cardlist_original.length;i++) cardlist_original[i].push("a_original");
 
 var cardlist_fareast = [
 ["욕심쟁이 요정"],["전서구"],["과세"],["무역 상인"],["궁병대"],["견습 마녀"],["쿠노이치"],["항구 도시"],["사무라이"],["광산 도시"],["동맹"],["부절"]
 ];
-for(var i=0;i<cardlist_fareast.length;i++) cardlist_fareast[i].push("fareast");
+for(var i=0;i<cardlist_fareast.length;i++) cardlist_fareast[i].push("b_fareast");
 
 var cardlist_witch = [
 ["고양이 요정 카트시"],["행운의 은화"],["세례"],["저주받은 인형"],["명마"],["엘프 저격수"],["궁정 암투"],["드워프 보석 장인"],["귀족의 외동딸"],["거상"],["지방 관리"],["공업 도시"],["독점"]
 ];
-for(var i=0;i<cardlist_witch.length;i++) cardlist_witch[i].push("witch");
+for(var i=0;i<cardlist_witch.length;i++) cardlist_witch[i].push("c_witch");
 
 function arrayShuffle(oldArray) {
     var newArray = oldArray.slice();
@@ -30,9 +30,9 @@ function arrayShuffle(oldArray) {
 
 function expansion_type(str_expansion){
 	switch(str_expansion){
-		case "original": return "기본판";
-		case "fareast": return "극동 변방령";
-		case "witch": return "북방의 마녀";
+		case "a_original": return "기본판";
+		case "b_fareast": return "극동 변방령";
+		case "c_witch": return "북방의 마녀";
 	}
 }
 
@@ -57,7 +57,13 @@ function select_cards(){
 			cardlist.push(cardlist_witch[i]);
 	}
 	var shuffledcard = arrayShuffle(cardlist);
-	
+	shuffledcard = shuffledcard.slice(0,10);
+	shuffledcard.sort(function(a,b){
+		if(a[1]>b[1]) return 1;
+		if(a[1]<b[1]) return -1;
+		return 0;
+	});
+
 	var table_selected = "<table><tbody>";
 	for(var i=1;i<=10;i++){
 		table_selected += "<tr><td>"+i+"</td><td>"+shuffledcard[i-1][0]+"</td><td>"+expansion_type(shuffledcard[i-1][1])+"</td></tr>";
@@ -65,3 +71,4 @@ function select_cards(){
 	table_selected += "</tbody></table>";
 	document.getElementById('table_selected').innerHTML = table_selected;
 }
+
